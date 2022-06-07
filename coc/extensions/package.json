@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "coc-prettier": ">=9.3.0",
+    "coc-sh": ">=0.6.1"
+  }
+}
