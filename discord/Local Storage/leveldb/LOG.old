@@ -1,9 +1,0 @@
-2022/05/31-16:13:56.167 1c52 Reusing MANIFEST /home/luis/.config/discord/Local Storage/leveldb/MANIFEST-000001
-2022/05/31-16:13:56.171 1c52 Recovering log #4
-2022/05/31-16:13:56.171 1c52 Reusing old log /home/luis/.config/discord/Local Storage/leveldb/000004.log 
-2022/05/31-17:29:00.891 24a7 Level-0 table #8: started
-2022/05/31-17:29:00.896 24a7 Level-0 table #8: 441747 bytes OK
-2022/05/31-17:29:00.898 24a7 Delete type=0 #4
-2022/06/01-21:49:17.687 24a7 Level-0 table #10: started
-2022/06/01-21:49:17.694 24a7 Level-0 table #10: 19623 bytes OK
-2022/06/01-21:49:17.696 24a7 Delete type=0 #7
