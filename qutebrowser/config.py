@@ -164,7 +164,7 @@ config.bind('ç', 'tab-next')
 config.bind('ç', 'move-to-next-char', mode='caret')
 
 # Configuration for closing tab manipulation
-config.bind('<Ctrl-x>', 'tab-close')
+config.bind('<Ctrl-d>', 'tab-close')
 config.bind('<Ctrl-c>', 'tab-clone')
 config.bind('<Ctrl-g>', 'tab-give')
 config.bind('<Ctrl-o>', 'tab-only')

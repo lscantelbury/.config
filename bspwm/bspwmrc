@@ -114,7 +114,7 @@ bspc rule -a Emacs state=fullscreen follow=on focus=on desktop=^4
 bspc rule -a Whatsapp-for-linux state=fullscreen follow=on focus=on desktop=^6
 bspc rule -a Steam state=tiled follow=on focus=on desktop=^7
 bspc rule -a Steam-runtime state=tiled follow=on focus=on desktop=^7
-bspc rule -a Netflix state=fullscreen follow=on focus=on desktop=^7
+
 ## Autostart -------------------------------------------------#
 
 # Kill if already running
