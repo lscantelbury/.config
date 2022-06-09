@@ -36,11 +36,11 @@ super + {w,m,x,r,s}
 ##---------- Applications ----------##
 
 # Launch Apps
-super + shift + {t,f,w,q}
-	{thunar,firefox,whatsapp-for-linux, qutebrowser}
+alt + shift + {t,f,w,q,e}
+	{thunar,firefox,whatsapp-for-linux, qutebrowser,emacs}
 
 # Terminal Apps
-super + alt + {n,r,h}
+alt + shift + {n,r,h}
 	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {nvim,ranger,htop}
 
 # Color Picker
@@ -49,7 +49,7 @@ super + p
 
 # Lockscreen
 F1
-    betterlockscreen --lock
+    betterlockscreen --lock --off 1
 
 ##---------- System Keys ----------##
 
@@ -74,6 +74,11 @@ ctrl + alt + Print
 	takeshot --area
 
 # Brighness control
+F3
+	brightness --dec
+F4
+	brightness --inc
+
 XF86MonBrightness{Up,Down}
 	brightness{ --inc, --dec}
 	
@@ -91,7 +96,7 @@ XF86Audio{Next,Prev,Play,Stop}
 ##---------- Bspwm ----------##
 
 # Close App
-super + c
+alt + c
 	bspc node -{c,k}
 
 # Reload Keybindings
@@ -107,15 +112,15 @@ ctrl + shift + {q,r}
 	bspc {quit,wm -r}
 	
 # Change focused window
-super + {j,k,l,ccedilla}
+alt + {j,k,l,ccedilla}
 	bspc node -f {west,south,north,east}
 
 # Move focused window
-super + shift + {j,k,l,ccedilla}
+alt + shift + {j,k,l,ccedilla}
 	bspc node focused -s {west, south, north, east} --follow
 
 # Split horizontal, vertical or cancel
-super + ctrl + {j,k,l,ccedilla,q}
+alt + ctrl + {j,k,l,ccedilla,q}
 	bspc node -p {west,south,north,east,cancel}
 
 # Preselect the ratio
@@ -128,7 +133,7 @@ super + f
     bspc node -t "~"fullscreen
 
 # Toggle beetwen floating & tiled
-super + space
+alt + space
     bspc node -t "~"{floating,tiled}
 
 # Pseudo Tiled & tiled mode
@@ -144,16 +149,16 @@ super + ctrl + {m,x,y,z}
 alt + {_,shift + }Tab
 	bspc node -f {next.local,prev.local}
 
-# Switch workspace
+# Switch worksuper
 ctrl + alt + {Left,Right}
 	bspc desktop -f {prev.local,next.local}
 
-# Switch to last opened workspace
+# Switch to last opened worksuper
 super + {Tab,grave}
 	bspc {node,desktop} -f last
 
-# Send focused window to another workspace
-super + {_,shift + }{1-8}
+# Send focused window to another worksuper
+alt + {_,shift + }{1-8}
 	bspc {desktop -f,node -d} '^{1-8}'
 
 # Expanding windows
