@@ -148,7 +148,7 @@ config.unbind('l', mode='normal')
 config.bind('J', 'scroll left')
 config.bind('j', 'tab-prev')
 config.bind('j', 'move-to-prev-char', mode='caret')
-config.bind('<Alt-j>', 'back')
+config.bind('<Ctrl-j>', 'back')
 
 # Configuration for the K character
 config.bind('K', 'scroll down')
@@ -162,6 +162,7 @@ config.bind('l', 'move-to-prev-line', mode='caret')
 config.bind('Ç', 'scroll right')
 config.bind('ç', 'tab-next')
 config.bind('ç', 'move-to-next-char', mode='caret')
+config.bind('<Ctrl-ç>', 'forward')
 
 # Configuration for closing tab manipulation
 config.bind('tx', 'tab-close')
