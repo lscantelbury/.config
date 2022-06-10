@@ -74,7 +74,7 @@ for i in ${files[@]}; do
 # 4 > code
 declare -a code=(Geany Emacs code-oss com.visualstudio.code)
 for i in ${code[@]}; do
-   bspc rule -a $i desktop=^4 follow=on focus=on; done
+   bspc rule -a $i desktop=^4 state=tiled follow=on focus=on; done
 
 # 5 > office and docs
 declare -a office=(Gucharmap Atril Evince \
