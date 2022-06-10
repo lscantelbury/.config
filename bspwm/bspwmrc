@@ -52,9 +52,6 @@ bspc config paddingless_monocle true
 bspc config single_monocle false
 bspc config focus_follows_pointer true
 
-# Restore the previous wallpaper
-nitrogen --restore
-
 ## Window rules ----------------------------------------------#
 
 # remove all rules first
