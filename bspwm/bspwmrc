@@ -89,9 +89,11 @@ for i in ${comm[@]}; do
    bspc rule -a $i desktop=^6 follow=on focus=on; done
 
 # 7 > media
+bspc rule -a FreeTube desktop=^7 state=tiled follow=on focus=on
+
 declare -a media=(Audacity Music Steam Steam-runtime tidal-hifi MPlayer Lxmusic Inkscape Gimp-2.10 obs)
 for i in ${media[@]}; do
-   bspc rule -a $i desktop=^7 state=floating follow=on focus=on; done
+   bspc rule -a $i desktop=^7 state=fullscreen follow=on focus=on; done
 
 # 8 > settings
 bspc rule -a 'VirtualBox Manager' desktop='^8' follow=on focus=on
@@ -108,7 +110,6 @@ for i in ${settings[@]}; do
 # for i in ${floating[@]}; do
 #   bspc rule -a $i state=floating follow=on focus=on; done
 
-bspc rule -a Conky state=floating manage=off
 bspc rule -a stalonetray state=floating manage=off
 
 ## Autostart -------------------------------------------------#
