@@ -37,7 +37,7 @@ super + {w,m,x,r,s}
 
 # Launch Apps
 alt + shift + {t,f,w,q,e}
-	{thunar,firefox,whatsapp-for-linux, qutebrowser,emacs}
+	{thunar,firefox,whatsapp-for-linux, qutebrowser, emacs}
 
 # Terminal Apps
 alt + shift + {n,r,h}
@@ -49,7 +49,7 @@ super + p
 
 # Lockscreen
 F1
-    betterlockscreen --lock --off 1
+    betterlockscreen --lock --off 5
 
 ##---------- System Keys ----------##
 
