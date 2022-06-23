@@ -92,7 +92,7 @@ for i in ${comm[@]}; do
 # 7 > media
 bspc rule -a FreeTube desktop=^7 state=tiled follow=on focus=on
 
-declare -a media=(Audacity Music Steam Steam-runtime tidal-hifi MPlayer Lxmusic Inkscape Gimp-2.10 obs)
+declare -a media=(Audacity Music Steam Netflix Steam-runtime tidal-hifi MPlayer Lxmusic Inkscape Gimp-2.10 obs)
 for i in ${media[@]}; do
    bspc rule -a $i desktop=^7 state=fullscreen follow=on focus=on; done
 
