@@ -10,6 +10,7 @@ application/x-theme=geany.desktop;
 application/json=geany.desktop;
 application/x-bittorrent=transmission-gtk.desktop;
 application/x-cd-image=com.usebottles.bottles.desktop;wine-extension-msp.desktop;winetricks.desktop;wine.desktop;
+application/pdf=atril.desktop;
 
 [Default Applications]
 image/gif=viewnior.desktop

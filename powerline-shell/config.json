@@ -10,5 +10,5 @@
     "jobs",
     "root"
   ],
-  "theme": "~/powerline-shell/build/lib/powerline_shell/themes/solarized_dark.py"
+  "theme": "~/powerline-shell/build/lib/powerline_shell/themes/solarized_light.py"
 }

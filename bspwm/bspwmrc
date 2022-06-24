@@ -52,7 +52,8 @@ bspc config paddingless_monocle true
 bspc config single_monocle false
 bspc config focus_follows_pointer true
 
-/usr/bin/emacs --fg-daemon
+## Starting emacs server with bswpm
+/usr/bin/emacs --daemon
 ## Window rules ----------------------------------------------#
 
 # remove all rules first

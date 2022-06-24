@@ -44,5 +44,14 @@ cursor:
 
   unfocused_hollow: false
 
+shell:
+  program: /bin/zsh
+  args:
+    - -c
+    - exec fish
+
+## Keybinds
+- {key: d, mods: Control, action: ScrollPageDown}
+
 ## Live config reload
 live_config_reload: true

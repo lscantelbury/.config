@@ -4,15 +4,15 @@
 ##---------- Keybindings for bspwm ----------##
 
 # Terminal (alacritty)
-super + Return
+alt + Return
 	bspterm
 
 # Terminal (floating)
-super + shift + Return
+alt + shift + Return
 	bspterm -f
 
 # Terminal (fullscreen)
-super + t
+alt + t
 	bspterm -s	
 
 ##---------- Rofi Launcher & Menus ----------##
@@ -22,7 +22,7 @@ alt + F1
 	sh ~/.config/bspwm/rofi/bin/launcher
 
 # Rofi Network Menu
-super + n
+alt + n
 	nmd
 
 # Rofi Themes Menu
@@ -30,7 +30,7 @@ ctrl + alt + t
 	sh ~/.config/bspwm/rofi/bin/themes
 
 # Rofi Menus/Applets
-super + {w,m,x,r,s}
+alt + {w,m,x,r,s}
 	sh ~/.config/bspwm/rofi/bin/{windows,mpd,powermenu,asroot,screenshot}
 
 ##---------- Applications ----------##
@@ -44,7 +44,7 @@ alt + shift + {n,r,h}
 	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {nvim,ranger,htop}
 
 # Color Picker
-super + p
+alt + p
 	color-gpick
 
 # Lockscreen
@@ -100,7 +100,7 @@ alt + c
 	bspc node -{c,k}
 
 # Reload Keybindings
-super + Escape
+alt + Escape
 	pkill -USR1 -x sxhkd
 
 # kill window
@@ -124,7 +124,7 @@ alt + ctrl + {j,k,l,ccedilla,q}
 	bspc node -p {west,south,north,east,cancel}
 
 # Preselect the ratio
-super + ctrl + {1-9}
+alt + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
 # Fullscreen or Monocle
@@ -137,12 +137,12 @@ alt + space
     bspc node -t "~"{floating,tiled}
 
 # Pseudo Tiled & tiled mode
-super + shift + space
+alt + shift + space
 #super + {p,t}
     bspc node -t "~"{pseudo_tiled,tiled}
 
 # Set the node flags
-super + ctrl + {m,x,y,z}
+alt + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
 # Change focus to next window, including floating window
@@ -154,7 +154,7 @@ ctrl + alt + {Left,Right}
 	bspc desktop -f {prev.local,next.local}
 
 # Switch to last opened worksuper
-super + {Tab,grave}
+alt + {Tab,grave}
 	bspc {node,desktop} -f last
 
 # Send focused window to another worksuper
@@ -162,7 +162,7 @@ alt + {_,shift + }{1-8}
 	bspc {desktop -f,node -d} '^{1-8}'
 
 # Expanding windows
-alt + control + {j,ccedilla,l,k}
+super + space + {j,ccedilla,l,k}
 	bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20}
 	
 ## Shrinking windows
@@ -174,7 +174,7 @@ alt + shift + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # Hide/Unhide Window
-super + shift + i
+alt + shift + i
 	winmask		
 
 ##---------- EOF ----------##
