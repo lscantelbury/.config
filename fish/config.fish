@@ -3,6 +3,8 @@ if status is-interactive
     neofetch
     set -U fish_greeting "🐟"
     alias emacs="emacsclient -c -a 'emacs'"
+	alias ls="exa --icons"
+	alias cat="bat"
 end
 
 function fish_prompt
