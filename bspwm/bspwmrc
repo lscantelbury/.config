@@ -37,6 +37,9 @@ workspaces() {
 }
 workspaces
 
+## Setting pt_BR keyboard layout
+setxkbmap br
+
 bspc config border_width 1
 bspc config window_gap 10
 bspc config split_ratio 0.50
@@ -52,8 +55,7 @@ bspc config paddingless_monocle true
 bspc config single_monocle false
 bspc config focus_follows_pointer true
 
-## Starting emacs server with bswpm
-/usr/bin/emacs --daemon
+
 ## Window rules ----------------------------------------------#
 
 # remove all rules first
@@ -117,7 +119,7 @@ bspc rule -a stalonetray state=floating manage=off
 ## Autostart -------------------------------------------------#
 
 # Kill if already running
-killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager
+killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager pulseaudio
 
 # Lauch xsettingsd daemon
 xsettingsd &
@@ -127,7 +129,17 @@ if [[ ! `pidof xfce-polkit` ]]; then
 	/usr/lib/xfce-polkit/xfce-polkit &
 fi
 
-# Lauch keybindings daemon
+## Starting emacs server with bswpm
+if [[ ! `pidof emacs`  ]]; then
+    /usr/bin/emacs --daemon &
+fi
+
+# Launch pulseaudio
+
+pulseaudio --start
+pulseaudio-equalizer enable
+
+# Launch keybindings daemon
 sxhkd &
 
 # Enable Super Keys For Menu
