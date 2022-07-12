@@ -94,8 +94,9 @@ for i in ${comm[@]}; do
 
 # 7 > media
 bspc rule -a FreeTube desktop=^7 state=tiled follow=on focus=on
+bspc rule -a tidal-hifi desktop=^7 state=tiled follow=on focus=on
 
-declare -a media=(Audacity Music Steam Netflix Steam-runtime tidal-hifi MPlayer Lxmusic Inkscape Gimp-2.10 obs)
+declare -a media=(Audacity Music Steam Netflix Steam-runtime MPlayer Lxmusic Inkscape Gimp-2.10 obs)
 for i in ${media[@]}; do
    bspc rule -a $i desktop=^7 state=fullscreen follow=on focus=on; done
 
@@ -119,7 +120,7 @@ bspc rule -a stalonetray state=floating manage=off
 ## Autostart -------------------------------------------------#
 
 # Kill if already running
-killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager pulseaudio
+killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager pulseaudio tidal-hifi
 
 # Lauch xsettingsd daemon
 xsettingsd &
@@ -135,7 +136,6 @@ if [[ ! `pidof emacs`  ]]; then
 fi
 
 # Launch pulseaudio
-
 pulseaudio --start
 pulseaudio-equalizer enable
 
