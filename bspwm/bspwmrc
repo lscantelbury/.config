@@ -17,6 +17,7 @@ getcolors() {
 	BACKGROUND=$(xrdb -query | grep 'background:'| awk '{print $NF}')
 	BLACK=$(xrdb -query | grep 'color0:'| awk '{print $NF}')
 	RED=$(xrdb -query | grep 'color1:'| awk '{print $NF}')
+
 	GREEN=$(xrdb -query | grep 'color2:'| awk '{print $NF}')
 	YELLOW=$(xrdb -query | grep 'color3:'| awk '{print $NF}')
 	BLUE=$(xrdb -query | grep 'color4:'| awk '{print $NF}')
@@ -39,6 +40,10 @@ workspaces
 
 ## Setting pt_BR keyboard layout
 setxkbmap br
+
+# Launch pulseaudio
+kill pulseaudio
+pulseaudio --start
 
 bspc config border_width 1
 bspc config window_gap 10
@@ -76,12 +81,12 @@ for i in ${files[@]}; do
    bspc rule -a $i desktop=^3 state=tiled follow=on focus=on; done
 
 # 4 > code
-declare -a code=(Geany Emacs code-oss com.visualstudio.code)
+declare -a code=(Geany Emacs emacsclient emacs emacs-28.1 code-oss com.visualstudio.code)
 for i in ${code[@]}; do
    bspc rule -a $i desktop=^4 state=tiled follow=on focus=on; done
 
 # 5 > office and docs
-declare -a office=(Gucharmap Atril Evince \
+declare -a office=(Gucharmap Kile kile Atril Evince \
 libreoffice-writer libreoffice-calc libreoffice-impress \
 libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)
 for i in ${office[@]}; do
@@ -120,7 +125,7 @@ bspc rule -a stalonetray state=floating manage=off
 ## Autostart -------------------------------------------------#
 
 # Kill if already running
-killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager pulseaudio tidal-hifi
+killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager
 
 # Lauch xsettingsd daemon
 xsettingsd &
@@ -135,9 +140,6 @@ if [[ ! `pidof emacs`  ]]; then
     /usr/bin/emacs --daemon &
 fi
 
-# Launch pulseaudio
-pulseaudio --start
-pulseaudio-equalizer enable
 
 # Launch keybindings daemon
 sxhkd &
